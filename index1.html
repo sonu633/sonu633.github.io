@@ -1,1 +1,1738 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sonu Kumar | Data Analytics Portfolio</title>
+  <style>
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f8fbfa;
+  color: #172b32;
+  line-height: 1.6;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #172b32;
+}
+
+.logo span,
+.hero h1 span,
+.about span {
+  color: #078d99;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #172b32;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  color: #078d99;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 25px;
+}
+
+.hero {
+  min-height: 550px;
+  padding: 80px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.hero-content {
+  max-width: 550px;
+}
+
+.subtitle {
+  color: #078d99;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.hero h1 {
+  font-size: 65px;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.hero-content > p:not(.subtitle) {
+  color: #65747a;
+  margin-bottom: 30px;
+}
+
+.btn {
+  display: inline-block;
+  background: #078d99;
+  color: white;
+  padding: 13px 25px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background: #086b75;
+}
+
+.hero-box {
+  width: 400px;
+  height: 350px;
+  position: relative;
+  background: #e5f2ef;
+  border-radius: 25px;
+}
+
+.floating-card {
+  position: absolute;
+  width: 175px;
+  padding: 25px;
+  border-radius: 12px;
+  color: white;
+  box-shadow: 0 10px 25px #0002;
+}
+
+.card1 {
+  background: #086b75;
+  top: 35px;
+  left: 15px;
+  transform: rotate(-7deg);
+}
+
+.card2 {
+  background: #183642;
+  top: 125px;
+  right: 15px;
+  transform: rotate(6deg);
+}
+
+.card3 {
+  background: #079ba5;
+  bottom: 25px;
+  left: 100px;
+}
+
+.projects {
+  background: #eef6f4;
+  padding: 80px 8%;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-title h2 {
+  font-size: 38px;
+}
+
+.section-title > p:last-child {
+  color: #65747a;
+}
+
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.project-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px #0000000d;
+  transition: .3s;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px #0002;
+}
+
+.project-image {
+  height: 175px;
+  padding: 25px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-image span {
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.sales {
+  background: linear-gradient(135deg, #075d69, #0b9aa4);
+}
+
+.hr {
+  background: linear-gradient(135deg, #172d3b, #436b77);
+}
+
+.student {
+  background: linear-gradient(135deg, #087b83, #54a9a2);
+}
+
+.project-content {
+  padding: 25px;
+}
+
+.project-content h3 {
+  margin-bottom: 12px;
+  font-size: 21px;
+}
+
+.project-content p {
+  color: #65747a;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.tags span {
+  background: #e7f5f2;
+  color: #087b83;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.project-content button {
+  border: none;
+  border-top: 1px solid #ddd;
+  padding-top: 15px;
+  width: 100%;
+  text-align: left;
+  background: white;
+  font-weight: bold;
+  color: #078d99;
+  cursor: pointer;
+}
+
+.about {
+  padding: 90px 8%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.about h2 {
+  font-size: 38px;
+  line-height: 1.2;
+}
+
+.about p {
+  color: #65747a;
+  margin-bottom: 15px;
+}
+
+footer {
+  background: #142d36;
+  color: white;
+  text-align: center;
+  padding: 35px;
+}
+
+footer p {
+  color: #b9cccc;
+  font-size: 13px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: #0009;
+  z-index: 20;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.modal-content {
+  background: white;
+  padding: 35px;
+  border-radius: 12px;
+  max-width: 550px;
+  width: 100%;
+  position: relative;
+}
+
+.modal-content h2 {
+  margin-bottom: 15px;
+}
+
+.modal-content p,
+.modal-content li {
+  color: #65747a;
+  margin-bottom: 10px;
+}
+
+.modal-content ul {
+  padding-left: 20px;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 18px;
+  font-size: 30px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+@media(max-width: 850px) {
+  .project-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-box {
+    width: 100%;
+  }
+}
+
+@media(max-width: 600px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: white;
+    flex-direction: column;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .hero h1 {
+    font-size: 45px;
+  }
+
+  .project-container {
+    grid-template-columns: 1fr;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+  }
+    }
+  
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f8fbfa;
+  color: #172b32;
+  line-height: 1.6;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #172b32;
+}
+
+.logo span,
+.hero h1 span,
+.about span {
+  color: #078d99;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #172b32;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  color: #078d99;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 25px;
+}
+
+.hero {
+  min-height: 550px;
+  padding: 80px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.hero-content {
+  max-width: 550px;
+}
+
+.subtitle {
+  color: #078d99;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.hero h1 {
+  font-size: 65px;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.hero-content > p:not(.subtitle) {
+  color: #65747a;
+  margin-bottom: 30px;
+}
+
+.btn {
+  display: inline-block;
+  background: #078d99;
+  color: white;
+  padding: 13px 25px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background: #086b75;
+}
+
+.hero-box {
+  width: 400px;
+  height: 350px;
+  position: relative;
+  background: #e5f2ef;
+  border-radius: 25px;
+}
+
+.floating-card {
+  position: absolute;
+  width: 175px;
+  padding: 25px;
+  border-radius: 12px;
+  color: white;
+  box-shadow: 0 10px 25px #0002;
+}
+
+.card1 {
+  background: #086b75;
+  top: 35px;
+  left: 15px;
+  transform: rotate(-7deg);
+}
+
+.card2 {
+  background: #183642;
+  top: 125px;
+  right: 15px;
+  transform: rotate(6deg);
+}
+
+.card3 {
+  background: #079ba5;
+  bottom: 25px;
+  left: 100px;
+}
+
+.projects {
+  background: #eef6f4;
+  padding: 80px 8%;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-title h2 {
+  font-size: 38px;
+}
+
+.section-title > p:last-child {
+  color: #65747a;
+}
+
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.project-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px #0000000d;
+  transition: .3s;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px #0002;
+}
+
+.project-image {
+  height: 175px;
+  padding: 25px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-image span {
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.sales {
+  background: linear-gradient(135deg, #075d69, #0b9aa4);
+}
+
+.hr {
+  background: linear-gradient(135deg, #172d3b, #436b77);
+}
+
+.student {
+  background: linear-gradient(135deg, #087b83, #54a9a2);
+}
+
+.project-content {
+  padding: 25px;
+}
+
+.project-content h3 {
+  margin-bottom: 12px;
+  font-size: 21px;
+}
+
+.project-content p {
+  color: #65747a;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.tags span {
+  background: #e7f5f2;
+  color: #087b83;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.project-content button {
+  border: none;
+  border-top: 1px solid #ddd;
+  padding-top: 15px;
+  width: 100%;
+  text-align: left;
+  background: white;
+  font-weight: bold;
+  color: #078d99;
+  cursor: pointer;
+}
+
+.about {
+  padding: 90px 8%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.about h2 {
+  font-size: 38px;
+  line-height: 1.2;
+}
+
+.about p {
+  color: #65747a;
+  margin-bottom: 15px;
+}
+
+footer {
+  background: #142d36;
+  color: white;
+  text-align: center;
+  padding: 35px;
+}
+
+footer p {
+  color: #b9cccc;
+  font-size: 13px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: #0009;
+  z-index: 20;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.modal-content {
+  background: white;
+  padding: 35px;
+  border-radius: 12px;
+  max-width: 550px;
+  width: 100%;
+  position: relative;
+}
+
+.modal-content h2 {
+  margin-bottom: 15px;
+}
+
+.modal-content p,
+.modal-content li {
+  color: #65747a;
+  margin-bottom: 10px;
+}
+
+.modal-content ul {
+  padding-left: 20px;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 18px;
+  font-size: 30px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+@media(max-width: 850px) {
+  .project-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-box {
+    width: 100%;
+  }
+}
+
+@media(max-width: 600px) {
+  .menu-toggle {
+    display: block;
+  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f8fbfa;
+  color: #172b32;
+  line-height: 1.6;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #172b32;
+}
+
+.logo span,
+.hero h1 span,
+.about span {
+  color: #078d99;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #172b32;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  color: #078d99;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 25px;
+}
+
+.hero {
+  min-height: 550px;
+  padding: 80px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.hero-content {
+  max-width: 550px;
+}
+
+.subtitle {
+  color: #078d99;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.hero h1 {
+  font-size: 65px;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.hero-content > p:not(.subtitle) {
+  color: #65747a;
+  margin-bottom: 30px;
+}
+
+.btn {
+  display: inline-block;
+  background: #078d99;
+  color: white;
+  padding: 13px 25px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background: #086b75;
+}
+
+.hero-box {
+  width: 400px;
+  height: 350px;
+  position: relative;
+  background: #e5f2ef;
+  border-radius: 25px;
+}
+
+.floating-card {
+  position: absolute;
+  width: 175px;
+  padding: 25px;
+  border-radius: 12px;
+  color: white;
+  box-shadow: 0 10px 25px #0002;
+}
+
+.card1 {
+  background: #086b75;
+  top: 35px;
+  left: 15px;
+  transform: rotate(-7deg);
+}
+
+.card2 {
+  background: #183642;
+  top: 125px;
+  right: 15px;
+  transform: rotate(6deg);
+}
+
+.card3 {
+  background: #079ba5;
+  bottom: 25px;
+  left: 100px;
+}
+
+.projects {
+  background: #eef6f4;
+  padding: 80px 8%;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-title h2 {
+  font-size: 38px;
+}
+
+.section-title > p:last-child {
+  color: #65747a;
+}
+
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.project-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px #0000000d;
+  transition: .3s;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px #0002;
+}
+
+.project-image {
+  height: 175px;
+  padding: 25px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-image span {
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.sales {
+  background: linear-gradient(135deg, #075d69, #0b9aa4);
+}
+
+.hr {
+  background: linear-gradient(135deg, #172d3b, #436b77);
+}
+
+.student {
+  background: linear-gradient(135deg, #087b83, #54a9a2);
+}
+
+.project-content {
+  padding: 25px;
+}
+
+.project-content h3 {
+  margin-bottom: 12px;
+  font-size: 21px;
+}
+
+.project-content p {
+  color: #65747a;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.tags span {
+  background: #e7f5f2;
+  color: #087b83;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.project-content button {
+  border: none;
+  border-top: 1px solid #ddd;
+  padding-top: 15px;
+  width: 100%;
+  text-align: left;
+  background: white;
+  font-weight: bold;
+  color: #078d99;
+  cursor: pointer;
+}
+
+.about {
+  padding: 90px 8%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.about h2 {
+  font-size: 38px;
+  line-height: 1.2;
+}
+
+.about p {
+  color: #65747a;
+  margin-bottom: 15px;
+}
+
+footer {
+  background: #142d36;
+  color: white;
+  text-align: center;
+  padding: 35px;
+}
+
+footer p {
+  color: #b9cccc;
+  font-size: 13px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: #0009;
+  z-index: 20;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.modal-content {
+  background: white;
+  padding: 35px;
+  border-radius: 12px;
+  max-width: 550px;
+  width: 100%;
+  position: relative;
+}
+
+.modal-content h2 {
+  margin-bottom: 15px;
+}
+
+.modal-content p,
+.modal-content li {
+  color: #65747a;
+  margin-bottom: 10px;
+}
+
+.modal-content ul {
+  padding-left: 20px;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 18px;
+  font-size: 30px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+@media(max-width: 850px) {
+  .project-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-box {
+    width: 100%;
+  }
+}
+
+@media(max-width: 600px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: white;
+    flex-direction: column;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .hero h1 {
+    font-size: 45px;
+  }
+
+  .project-container {
+    grid-template-columns: 1fr;
+  }
+
+  .about {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f8fbfa;
+  color: #172b32;
+  line-height: 1.6;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #172b32;
+}
+
+.logo span,
+.hero h1 span,
+.about span {
+  color: #078d99;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #172b32;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  color: #078d99;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 25px;
+}
+
+.hero {
+  min-height: 550px;
+  padding: 80px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.hero-content {
+  max-width: 550px;
+}
+
+.subtitle {
+  color: #078d99;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.hero h1 {
+  font-size: 65px;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.hero-content > p:not(.subtitle) {
+  color: #65747a;
+  margin-bottom: 30px;
+}
+
+.btn {
+  display: inline-block;
+  background: #078d99;
+  color: white;
+  padding: 13px 25px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background: #086b75;
+}
+
+.hero-box {
+  width: 400px;
+  height: 350px;
+  position: relative;
+  background: #e5f2ef;
+  border-radius: 25px;
+}
+
+.floating-card {
+  position: absolute;
+  width: 175px;
+  padding: 25px;
+  border-radius: 12px;
+  color: white;
+  box-shadow: 0 10px 25px #0002;
+}
+
+.card1 {
+  background: #086b75;
+  top: 35px;
+  left: 15px;
+  transform: rotate(-7deg);
+}
+
+.card2 {
+  background: #183642;
+  top: 125px;
+  right: 15px;
+  transform: rotate(6deg);
+}
+
+.card3 {
+  background: #079ba5;
+  bottom: 25px;
+  left: 100px;
+}
+
+.projects {
+  background: #eef6f4;
+  padding: 80px 8%;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-title h2 {
+  font-size: 38px;
+}
+
+.section-title > p:last-child {
+  color: #65747a;
+}
+
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.project-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px #0000000d;
+  transition: .3s;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px #0002;
+}
+
+.project-image {
+  height: 175px;
+  padding: 25px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-image span {
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.sales {
+  background: linear-gradient(135deg, #075d69, #0b9aa4);
+}
+
+.hr {
+  background: linear-gradient(135deg, #172d3b, #436b77);
+}
+
+.student {
+  background: linear-gradient(135deg, #087b83, #54a9a2);
+}
+
+.project-content {
+  padding: 25px;
+}
+
+.project-content h3 {
+  margin-bottom: 12px;
+  font-size: 21px;
+}
+
+.project-content p {
+  color: #65747a;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.tags span {
+  background: #e7f5f2;
+  color: #087b83;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.project-content button {
+  border: none;
+  border-top: 1px solid #ddd;
+  padding-top: 15px;
+  width: 100%;
+  text-align: left;
+  background: white;
+  font-weight: bold;
+  color: #078d99;
+  cursor: pointer;
+}
+
+.about {
+  padding: 90px 8%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.about h2 {
+  font-size: 38px;
+  line-height: 1.2;
+}
+
+.about p {
+  color: #65747a;
+  margin-bottom: 15px;
+}
+
+footer {
+  background: #142d36;
+  color: white;
+  text-align: center;
+  padding: 35px;
+}
+
+footer p {
+  color: #b9cccc;
+  font-size: 13px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: #0009;
+  z-index: 20;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.modal-content {
+  background: white;
+  padding: 35px;
+  border-radius: 12px;
+  max-width: 550px;
+  width: 100%;
+  position: relative;
+}
+
+.modal-content h2 {
+  margin-bottom: 15px;
+}
+
+.modal-content p,
+.modal-content li {
+  color: #65747a;
+  margin-bottom: 10px;
+}
+
+.modal-content ul {
+  padding-left: 20px;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 18px;
+  font-size: 30px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+@media(max-width: 850px) {
+  .project-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-box {
+    width: 100%;
+  }
+}
+
+@media(max-width: 600px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: white;
+    flex-direction: column;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .hero h1 {
+    font-size: 45px;
+  }
+
+  .project-container {
+    grid-template-columns: 1fr;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+  }
+  }
+    
+    grid-template-columns: 1fr;
+  }
+  }
+  
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: white;
+    flex-direction: column;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .hero h1 {
+    font-size: 45px;
+  }
+
+  .project-container {
+    grid-template-columns: 1fr;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+  }
+    }
+    
+
+
+
+
+    
+  </style>
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <a href="#home" class="logo">SK<span>.</span></a>
+    <button class="menu-toggle" id="menuToggle">☰</button>
+    <div class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <div class="hero-content">
+    <p class="subtitle">HEX SOFTWARES PROJECT SHOWCASE</p>
+    <h1>Data Analytics<br><span>Portfolio</span></h1>
+    <p>
+      Exploring data through Excel, Power BI and Python.
+      Three projects focused on business insights,
+      employee analytics and student performance.
+    </p>
+    <a href="#projects" class="btn">Explore Projects ↓</a>
+  </div>
+  <div class="hero-box">
+    <div class="floating-card card1">01<br><b>Sales Analytics</b></div>
+    <div class="floating-card card2">02<br><b>HR Analytics</b></div>
+    <div class="floating-card card3">03<br><b>Student Analysis</b></div>
+  </div>
+</section>
+
+<section class="projects" id="projects">
+  <div class="section-title">
+    <p class="subtitle">MY WORK</p>
+    <h2>Featured Projects</h2>
+    <p>Three analytics projects assigned by Hex Softwares.</p>
+  </div>
+
+  <div class="project-container">
+
+    <div class="project-card">
+      <div class="project-image sales">
+        <span>PROJECT 01</span>
+        <h2>Sales Dashboard</h2>
+      </div>
+      <div class="project-content">
+        <h3>Sales Dashboard Analysis</h3>
+        <p>
+          Analyze revenue, profit, customer trends,
+          product performance and regional sales patterns.
+          Create an interactive dashboard to support
+          data-driven business decisions.
+        </p>
+        <div class="tags">
+          <span>Excel</span>
+          <span>Power BI</span>
+          <span>Dashboard</span>
+        </div>
+        <button onclick="showDetails('sales')">View Details →</button>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-image hr">
+        <span>PROJECT 02</span>
+        <h2>HR Analytics</h2>
+      </div>
+      <div class="project-content">
+        <h3>Employee Attrition Analysis</h3>
+        <p>
+          Analyze employee turnover using attrition count,
+          attrition rate, average salary and employee
+          distribution by department, age group and job role.
+        </p>
+        <div class="tags">
+          <span>Power BI</span>
+          <span>HR Analytics</span>
+          <span>Visualization</span>
+        </div>
+        <button onclick="showDetails('hr')">View Details →</button>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-image student">
+        <span>PROJECT 03</span>
+        <h2>Student Analysis</h2>
+      </div>
+      <div class="project-content">
+        <h3>Student Performance Analysis</h3>
+        <p>
+          Analyze student scores, attendance, study time
+          and subject-wise performance to identify
+          academic trends and improvement areas.
+        </p>
+        <div class="tags">
+          <span>Excel</span>
+          <span>Power BI</span>
+          <span>Python</span>
+        </div>
+        <button onclick="showDetails('student')">View Details →</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div>
+    <p class="subtitle">ABOUT ME</p>
+    <h2>Turning Data Into<br><span>Meaningful Insights</span></h2>
+  </div>
+  <div>
+    <p>
+      I am an aspiring Data Analyst and B.Tech Computer
+      Science student interested in data analysis,
+      business intelligence and data visualization.
+      This portfolio showcases three analytics project briefs.
+    </p>
+    <p><b>Technical Skills:</b> Python, SQL, Excel, Power BI, Pandas and NumPy.</p>
+  </div>
+</section>
+
+<footer>
+  <h3>Sonu Kumar</h3>
+  <p>Data Analytics Portfolio | Hex Softwares Projects</p>
+  <p>© 2026 All Rights Reserved.</p>
+</footer>
+
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <button class="close" onclick="closeDetails()">×</button>
+    <h2 id="modalTitle"></h2>
+    <p id="modalDescription"></p>
+    <h3>Analysis Focus</h3>
+    <ul id="modalPoints"></ul>
+  </div>
+</div>
+
+<script src="script.js">
+
+const projects = {
+  sales: {
+    title: "Sales Dashboard Analysis",
+    description: "Analyze sales data to track revenue, profit, customer trends, product performance and regional sales patterns.",
+    points: [
+      "Revenue and profit analysis",
+      "Customer trend analysis",
+      "Top-selling product identification",
+      "Regional sales comparison",
+      "Interactive dashboard creation"
+    ]
+  },
+
+  hr: {
+    title: "HR Analytics – Employee Attrition Analysis",
+    description: "Analyze employee attrition data to identify factors affecting employee turnover and workforce retention.",
+    points: [
+      "Total employee count",
+      "Employee attrition count",
+      "Attrition rate calculation",
+      "Average salary analysis",
+      "Department and job role analysis",
+      "Age group distribution"
+    ]
+  },
+
+  student: {
+    title: "Student Performance Analysis",
+    description: "Analyze student academic performance using scores, attendance, study time and subject-wise results.",
+    points: [
+      "Student score analysis",
+      "Attendance analysis",
+      "Study time analysis",
+      "Subject-wise performance",
+      "Performance comparison",
+      "Academic improvement insights"
+    ]
+  }
+};
+
+function showDetails(projectName) {
+  const project = projects[projectName];
+
+  document.getElementById("modalTitle").textContent =
+    project.title;
+
+  document.getElementById("modalDescription").textContent =
+    project.description;
+
+  const list = document.getElementById("modalPoints");
+  list.innerHTML = "";
+
+  project.points.forEach(point => {
+    const li = document.createElement("li");
+    li.textContent = point;
+    list.appendChild(li);
+  });
+
+  document.getElementById("modal").style.display = "flex";
+}
+
+function closeDetails() {
+  document.getElementById("modal").style.display = "none";
+}
+
+document.getElementById("modal").addEventListener("click", function(event) {
+  if (event.target === this) {
+    closeDetails();
+  }
+});
+
+document.addEventListener("keydown", function(event) {
+  if (event.key === "Escape") {
+    closeDetails();
+  }
+});
+
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", function() {
+  navLinks.classList.toggle("show");
+});
+
+navLinks.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("show");
+  });
+});
+  4
+  
+</script>
+</body>
+      </html>
+      
